@@ -1,0 +1,97 @@
+Flash Card App - FlashCardApp Class
+
+The FlashCardApp class is the core component of the Flash Card App module, responsible for managing the user interface and functionality of the application.
+
+Methods:
+
+1) __init__(self, master)
+Description: Initializes the FlashCardApp instance.
+Parameters: `master`: The tkinter root window.
+Usage: `app = FlashCardApp(root)`
+
+2) main_menu(self)
+Description: Displays the main menu of the application.
+Usage: Automatically called upon initialization.
+
+3) create_new_deck(self)
+Description: Allows the user to create a new deck of flashcards.
+Usage: Accessed via the "Create New Deck" button on the main menu.
+
+4) save_new_deck(self)
+Description: Saves the newly created deck with the entered name.
+Usage: Called upon clicking the "Create Deck" button in the create_new_deck() method.
+
+5) select_existing_deck(self)
+Description: Allows the user to select an existing deck from a list.
+Usage: Accessed via the "Select Existing Deck" button on the main menu.
+
+6) load_selected_deck(self)
+Description: Loads the selected deck for editing or viewing.
+Usage: Called upon clicking the "Select" button in the select_existing_deck() method.
+
+7) edit_deck(self)
+Description: Displays options to manage the selected deck (add, edit, delete, view cards, study mode, close deck).
+Usage: Called after selecting or creating a deck.
+
+8) add_card(self)
+Description: Allows the user to add a new flashcard to the selected deck.
+Usage: Accessed via the "Add Card" button in the edit_deck() method.
+
+9) save_card(self)
+Description: Saves the newly created flashcard with entered content.
+Usage: Called upon clicking the "Add Card" button in the add_card() method.
+
+10) edit_card(self)
+Description: Allows the user to edit an existing flashcard in the selected deck.
+Usage: Accessed via the "Edit Card" button in the edit_deck() method.
+
+11) modify_selected_card(self)
+Description: Modifies the content of the selected flashcard.
+Usage: Called upon clicking the "Edit" button in the edit_card() method.
+
+12) save_modified_card(self, index)
+Description: Saves the modified content of the flashcard.
+Parameters: `index`: Index of the flashcard in the deck.
+Usage: Called upon clicking the "Save Changes" button in the modify_selected_card() method.
+
+13) delete_card(self)
+Description: Allows the user to delete an existing flashcard from the selected deck.
+Usage: Accessed via the "Delete Card" button in the edit_deck() method.
+
+14) remove_selected_card(self)
+Description: Removes the selected flashcard from the deck.
+Usage: Called upon clicking the "Delete" button in the delete_card() method.
+
+15) view_cards(self)
+Description: Displays all the flashcards in the selected deck.
+Usage: Accessed via the "View Cards" button in the edit_deck() method.
+
+16) study_mode(self)
+Description: Initiates the study mode for the selected deck.
+Usage: Accessed via the "Study Mode" button in the edit_deck() method.
+
+17) close_deck(self)
+Description: Closes the currently selected deck and returns to the main menu.
+Usage: Accessed via the "Close Deck" button in the edit_deck() method.
+
+18) start_review_mode(self)
+Description: Initiates the review mode for the selected deck.
+Usage: Automatically called when entering study mode.
+
+19) review_cards(self)
+Description: Displays flashcards one by one for review.
+Usage: Automatically called during study mode.
+
+20) show_answer(self, card)
+Description: Reveals the answer of the current flashcard being reviewed.
+Parameters: `card`: The flashcard object.
+Usage: Accessed via the "Show Answer" button during review.
+
+21) next_review_card(self)
+Description: Moves to the next flashcard during review.
+Usage: Accessed via the "Next Card" button during review.
+
+22) clear_window(self)
+Description: Clears the tkinter window by destroying all widgets.
+Usage: Called before displaying new content or switching between screens.
+

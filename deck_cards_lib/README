@@ -1,0 +1,42 @@
+flashcard_deck Module
+
+The flashcard_deck module provides classes for creating and managing flashcards and decks of flashcards.
+
+Classes
+
+1)FlashCard
+
+Represents a single flashcard with two sides, `side1` and `side2`.
+
+"side1": The content of the first side of the flashcard.
+"side2": The content of the second side of the flashcard.
+
+2)Deck
+
+Represents a collection of flashcards organized into a deck.
+
+"name": The name of the deck.
+
+Methods:
+
+1)add_card(self, card): Adds a flashcard to the deck.
+2)remove_card(self, index): Removes a flashcard from the deck at the specified index.
+3)modify_card(self, index, card): Modifies a flashcard in the deck at the specified index.
+
+## Example Usage
+
+#Create a new flashcard
+flashcard = FlashCard("Question", "Answer")
+
+#Create a new deck
+deck = Deck("My Deck")
+
+#Add the flashcard to the deck
+deck.add_card(flashcard)
+
+#Modify the flashcard in the deck
+new_flashcard = FlashCard("New Question", "New Answer")
+deck.modify_card(0, new_flashcard)
+
+#Remove the flashcard from the deck
+deck.remove_card(0)
